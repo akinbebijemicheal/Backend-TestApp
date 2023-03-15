@@ -2,10 +2,10 @@
   "name": "testapp",
   "version": "1.0.0",
   "description": "Login System Express X React",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "cross-env NODE_ENV=development nodemon src/server.js",
+    "start": "node src/index.js",
+    "dev": "cross-env NODE_ENV=development nodemon src/index.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prettier": "prettier --check **/*.js",
