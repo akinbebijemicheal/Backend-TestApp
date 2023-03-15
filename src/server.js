@@ -3,7 +3,7 @@ const app = require('./app');
 const config = require('./config/config');
 const logger = require('./config/logger');
 const userschema = require("./models/user.model.js")
-const Uploadschema = require("./models/upload.model.js")
+// const Uploadschema = require("./models/upload.model.js")
 
 
 let server;
