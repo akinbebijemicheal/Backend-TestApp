@@ -56,7 +56,7 @@ if (config.env === 'production') {
 }
 
 // v1 api routesV1
-app.use('/', routes);
+app.use('/.netlify/functions/api', routes);
 
 // send back a 404 error for any unknown api request
 app.use((_req, res) => {
