@@ -44,7 +44,7 @@ app.use(compression());
 
 // enable cors
 app.use(cors({
-  origin: 'https://stroge-list.vercel.app/',
+  origin: 'https://keeper-mern.vercel.app/',
   methods: ['GET', 'POST', 'DELETE', 'UPDATE']
 }));
 app.options('*', cors());
