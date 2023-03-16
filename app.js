@@ -33,7 +33,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(cors());
 app.use(cookieParser(process.env.CSECRET));
 
 // sanitize request data
@@ -44,7 +43,10 @@ app.use(mongoSanitize());
 app.use(compression());
 
 // enable cors
-app.use(cors());
+app.use(cors({
+  origin: 'https://stroge-list.vercel.app/',
+  methods: ['GET', 'POST', 'DELETE', 'UPDATE']
+}));
 app.options('*', cors());
 
 // jwt authentication
