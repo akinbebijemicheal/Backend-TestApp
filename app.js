@@ -43,11 +43,7 @@ app.use(mongoSanitize());
 app.use(compression());
 
 // enable cors
-app.use(cors({
-  origin: 'https://keeper-mern.vercel.app/',
-  methods: ['GET', 'POST', 'DELETE', 'UPDATE']
-}));
-app.options('*', cors());
+app.use(cors());
 
 // jwt authentication
 app.use(passport.initialize());
