@@ -14,7 +14,7 @@ const getFiles = catchAsync(async (req, res) => {
        lang = req.query.lang
       }
     }
-    const filePath = path.resolve(__dirname, `../files/${lang}.ftl`); // Path to the FTL file
+    const filePath = path.resolve(process.cwd(), `./files/${lang}.ftl`); // Path to the FTL file
 
     // Read the FTL file and send as plain text response
     fs.readFile(filePath, "utf8", (err, data) => {
