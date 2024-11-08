@@ -54,7 +54,7 @@ if (config.env === 'production') {
 }
 
 // v1 api routesV1
-app.use('/core', routes);
+app.use('/', routes);
 
 
 
