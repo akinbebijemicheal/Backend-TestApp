@@ -24,7 +24,7 @@ const getFiles = catchAsync(async (req, res) => {
       } else {
         // res.set('Content-Type', 'text/plain');
         return res.send(data); // Send the raw FTL file content
-  
+      }
     });
   } catch (error) {
     console.log(error);
