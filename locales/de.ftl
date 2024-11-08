@@ -1,7 +1,7 @@
 
 language-local-string = de-DE
 
-#Charge steps
+
 charging-steps-connect-title = Verbinden Sie Ihr Ladegerät
 charging-steps-connect-description = Es kann einige Sekunden dauern, bis die Verbindung hergestellt ist
 

@@ -1,7 +1,7 @@
 
 language-local-string = nl-BE
 
-#Charge steps
+
 charging-steps-connect-title = Verbind uw lader
 charging-steps-connect-description = Het kan enkele seconden duren voordat de verbinding tot stand is gebracht
 
