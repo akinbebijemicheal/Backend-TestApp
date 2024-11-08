@@ -1,5 +1,4 @@
 const express = require('express');
-const router = express.Router();
 const helmet = require('helmet');
 const xss = require('xss-clean');
 const mongoSanitize = require('express-mongo-sanitize');
@@ -57,23 +56,13 @@ if (config.env === 'production') {
 // v1 api routesV1
 app.use('/', routes);
 
-router.get("/", async (req, res) => {
-    try{
-        res.json({
-            status: 200,
-            message: "Hello"
-        });
-    } catch (error){
-        console.error(error);
-        return res.status(500).send("Server error")
-    }
-})
+
 
 // send back a 404 error for any unknown api request
 app.use((_req, res) => {
   res.status(404).json({
     status: 404,
-    message: 'Not foundttt',
+    message: 'Not found',
   });
 });
 
