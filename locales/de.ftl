@@ -1,3 +1,4 @@
+
 language-local-string = de-DE
 
 #Charge steps

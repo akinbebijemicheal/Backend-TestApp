@@ -18,12 +18,9 @@ const getFiles = catchAsync(async (req, res) => {
 
     // Read the FTL file and send as plain text response
     fs.readFile(filePath, "utf8", (err, data) => {
-      if (err) {
-        return res.status(500).send("Error reading FTL file");
-      } else {
-        // res.set('Content-Type', 'text/plain');
+
         return res.send(data); // Send the raw FTL file content
-      }
+  
     });
   } catch (error) {
     console.log(error);
