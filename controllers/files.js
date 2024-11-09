@@ -8,7 +8,7 @@ const fs = require("fs");
 
 const getFiles = catchAsync(async (req, res) => {
   try {
-    let lang = "en";
+    let lang = "de";
     if (req.params.lang) {
       if (req.params.lang != "") {
         lang = req.params.lang;
