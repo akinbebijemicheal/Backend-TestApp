@@ -8,11 +8,9 @@ const fs = require("fs");
 
 const getFiles = catchAsync(async (req, res) => {
   try {
-    let lang = "de";
+    let lang = "nl";
     if (req.params.lang) {
-      if (req.params.lang != "") {
         lang = req.params.lang;
-      }
     }
 
     const filePath = path.resolve(process.cwd(), `./files/${lang}.ftl`); // Path to the FTL file
