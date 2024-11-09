@@ -7,6 +7,6 @@ const filesController = require('../controllers/files');
 const router = express.Router();
 
 router
-  .get('/:lang', filesController.getFiles);
+  .get('/', filesController.getFiles);
 module.exports = router;
 
