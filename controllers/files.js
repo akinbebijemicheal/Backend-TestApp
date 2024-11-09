@@ -8,19 +8,19 @@ const fs = require("fs");
 
 const getFiles = catchAsync(async (req, res) => {
   try {
-    let lang = 'en'
-    if (req.query.lang) {
-      if (req.query.lang != "") {
-       lang = req.query.lang
+    let lang = "en";
+    if (req.params.lang) {
+      if (req.params.lang != "") {
+        lang = req.params.lang;
       }
     }
-    
+
     const filePath = path.resolve(process.cwd(), `./files/${lang}.ftl`); // Path to the FTL file
-console.log(filePath)
+    console.log(filePath);
     // Read the FTL file and send as plain text response
     fs.readFile(filePath, "utf8", (err, data) => {
       if (err) {
-        console.log(err)
+        console.log(err);
         return res.status(500).send("Error reading FTL file");
       } else {
         // res.set('Content-Type', 'text/plain');
